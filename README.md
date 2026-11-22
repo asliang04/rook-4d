@@ -82,8 +82,10 @@ defaults to the center.
 - 3D uses one cube. 4D uses three `w` slices. 5D uses nine `(w, v)` slices,
   with `w` across columns and `v` across rows.
 - Drag any cube to rotate every cube together. Buttons also rotate and reset the view.
-- On touchscreens, swipe sideways to rotate, swipe vertically to scroll, and use
-  the tilt button to adjust the angle.
+- On touchscreens, double-tap the same spot on a cube to turn rotation lock on or off.
+  With the lock on, drag a cube in any direction and swipe outside the cubes to scroll.
+  With the lock off, swipe sideways to rotate or vertically to scroll. Single taps
+  still edit cells after a brief pause.
 - Click a cell to add a rook; click it again to remove it. Erase mode only removes rooks.
 - Cell shades alternate by the parity of the sum of all active coordinates.
 - Enter one coordinate per active axis (`x, y, z, w, v`), each from **1 to 3**,

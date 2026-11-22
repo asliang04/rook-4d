@@ -17,11 +17,13 @@ const icons = {
 const icon = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 const initialRotation = () => ({ yaw: -0.6, pitch: 0.42 });
 const examples = new Map([['4d-14', fourDimensionalMate], ['5d-27', fiveDimensionalMate]]);
+const DOUBLE_TAP_MS = 300;
+const DOUBLE_TAP_RADIUS = 24;
 
 const state = {
   dimensions: 4, king: centerId(4), rooks: [], selected: centerId(4),
   tool: 'rook', view: '3d', attacks: true, escapes: false,
-  spacing: 55, rotation: initialRotation(),
+  spacing: 55, rotation: initialRotation(), rotationLocked: false,
 };
 let analysis = analyze(state.king, state.rooks, state.dimensions);
 
@@ -88,12 +90,48 @@ document.querySelector('#app').innerHTML = `
       <div id="pieces" class="piece-tray" aria-label="Pieces"></div>
     </section>
   </main>
+  <div id="rotation-lock-status" class="rotation-lock-status" role="status"></div>
 `;
 
 const $ = (selector) => document.querySelector(selector);
 const notify = (message) => { $('#notice').textContent = message; };
 const activeAxes = () => AXES.slice(0, state.dimensions);
 const centerCoordinate = () => Array(state.dimensions).fill(2).join(', ');
+let pendingCubeTap = null;
+
+function setRotationLocked(locked) {
+  state.rotationLocked = locked;
+  $('#board-shell').classList.toggle('rotation-locked', locked);
+  $('#rotation-lock-status').textContent = locked ? 'Rotation lock on' : '';
+}
+
+function clearPendingCubeTap() {
+  if (pendingCubeTap) clearTimeout(pendingCubeTap.timer);
+  pendingCubeTap = null;
+}
+
+function applyPendingCubeTap() {
+  const tap = pendingCubeTap;
+  clearPendingCubeTap();
+  if (tap?.cell !== undefined && tap.stage.isConnected && state.view === '3d') editCell(tap.cell);
+}
+
+function handleCubeTap(event, stage, cell) {
+  const tap = pendingCubeTap;
+  const x = event.clientX;
+  const y = event.clientY;
+  const time = performance.now();
+  // Reserve two near taps on the same spot for rotation, without editing a cell.
+  if (tap && tap.stage === stage && tap.cell === cell && time - tap.time <= DOUBLE_TAP_MS &&
+      Math.hypot(x - tap.x, y - tap.y) <= DOUBLE_TAP_RADIUS) {
+    clearPendingCubeTap();
+    setRotationLocked(!state.rotationLocked);
+    return;
+  }
+
+  applyPendingCubeTap();
+  pendingCubeTap = { stage, cell, x, y, time, timer: setTimeout(applyPendingCubeTap, DOUBLE_TAP_MS) };
+}
 
 function slicesFor(dimensions) {
   return Array.from({ length: 3 ** (dimensions - 3) }, (_, id) =>
@@ -155,6 +193,7 @@ function renderPosition() {
 }
 
 function setTool(tool) {
+  applyPendingCubeTap();
   state.tool = tool;
   document.querySelectorAll('[data-tool]').forEach((button) => {
     button.classList.toggle('active', button.dataset.tool === tool);
@@ -179,6 +218,7 @@ function editCell(id) {
 
 function setDimensions(dimensions) {
   if (dimensions === state.dimensions) return;
+  clearPendingCubeTap();
   state.dimensions = dimensions;
   state.king = centerId(dimensions);
   state.selected = state.king;
@@ -200,6 +240,7 @@ function positionMessage(message, error = false) {
 function loadPosition(position) {
   // Parse/validate before calling this function, so invalid imports never clear
   // the existing board. Assign dimensions and pieces together before rendering.
+  clearPendingCubeTap();
   state.dimensions = position.dimensions;
   state.king = position.king;
   state.rooks = [...position.rooks];
@@ -277,7 +318,9 @@ $('#position-file').addEventListener('change', async (event) => {
 
 document.querySelectorAll('[data-tool]').forEach((button) => button.addEventListener('click', () => setTool(button.dataset.tool)));
 document.querySelectorAll('[data-view]').forEach((button) => button.addEventListener('click', () => {
+  applyPendingCubeTap();
   state.view = button.dataset.view;
+  if (state.view === 'flat') setRotationLocked(false);
   document.querySelectorAll('[data-view]').forEach((item) => { item.classList.toggle('active', item === button); item.setAttribute('aria-pressed', item === button); });
   renderViews();
 }));
@@ -300,7 +343,12 @@ $('#pieces').addEventListener('click', (event) => {
   notify(`Rook removed from (${coordinates(id, state.dimensions)}).`);
   renderPosition();
 });
-$('#clear').addEventListener('click', () => { state.rooks = []; notify('All rooks cleared.'); renderPosition(); });
+$('#clear').addEventListener('click', () => {
+  clearPendingCubeTap();
+  state.rooks = [];
+  notify('All rooks cleared.');
+  renderPosition();
+});
 $('#show-attacks').addEventListener('change', (event) => { state.attacks = event.target.checked; renderViews(); });
 $('#show-escapes').addEventListener('change', (event) => { state.escapes = event.target.checked; renderViews(); });
 $('#spacing').addEventListener('input', (event) => { state.spacing = Number(event.target.value); renderViews(); });
@@ -310,26 +358,32 @@ $('#rotate-up').addEventListener('click', () => { state.rotation.pitch += Math.P
 
 let drag = null;
 let suppressClick = false;
+let boardPointerType = '';
 $('#board').addEventListener('pointerdown', (event) => {
   if (event.button !== 0 || !event.isPrimary) return;
   suppressClick = false;
+  boardPointerType = event.pointerType;
   if (state.view !== '3d' || !event.target.closest('.cube-svg')) return;
-  drag = { x: event.clientX, y: event.clientY, yaw: state.rotation.yaw, pitch: state.rotation.pitch, moved: false, pointer: event.pointerId, touch: event.pointerType === 'touch' };
+  drag = {
+    x: event.clientX, y: event.clientY, yaw: state.rotation.yaw, pitch: state.rotation.pitch,
+    moved: false, pointer: event.pointerId,
+    horizontalOnly: event.pointerType === 'touch' && !state.rotationLocked,
+  };
 });
 $('#board').addEventListener('pointermove', (event) => {
   if (!drag || drag.pointer !== event.pointerId) return;
   const dx = event.clientX - drag.x;
   const dy = event.clientY - drag.y;
-  // Let vertical touch gestures scroll the page. Horizontal swipes rotate.
-  if (drag.touch && !drag.moved && Math.abs(dy) > 5 && Math.abs(dy) >= Math.abs(dx)) {
+  // With rotation unlocked, let vertical touch gestures scroll the page.
+  if (drag.horizontalOnly && !drag.moved && Math.abs(dy) > 5 && Math.abs(dy) >= Math.abs(dx)) {
     drag = null;
     suppressClick = true;
     return;
   }
-  if (drag.moved || (drag.touch ? Math.abs(dx) > 5 : Math.hypot(dx, dy) > 5)) {
+  if (drag.moved || (drag.horizontalOnly ? Math.abs(dx) > 5 : Math.hypot(dx, dy) > 5)) {
     if (!drag.moved) $('#board').setPointerCapture(event.pointerId);
     drag.moved = true;
-    state.rotation = { yaw: drag.yaw + dx * 0.008, pitch: drag.pitch + (drag.touch ? 0 : dy * 0.008) };
+    state.rotation = { yaw: drag.yaw + dx * 0.008, pitch: drag.pitch + (drag.horizontalOnly ? 0 : dy * 0.008) };
     renderViews();
   }
 });
@@ -346,9 +400,15 @@ $('#board').addEventListener('pointercancel', (event) => {
 });
 $('#board').addEventListener('pointerleave', () => { if (drag && !drag.moved) drag = null; });
 $('#board').addEventListener('click', (event) => {
+  // Some browsers deliver click as a MouseEvent without pointerType.
+  const touch = event.pointerType === 'touch' || (event.detail > 0 && boardPointerType === 'touch');
+  boardPointerType = '';
   if (suppressClick && event.detail > 0) { suppressClick = false; return; }
   const cell = event.target.closest('[data-cell], [data-piece]');
-  if (cell) editCell(Number(cell.dataset.cell ?? cell.dataset.piece));
+  const id = cell ? Number(cell.dataset.cell ?? cell.dataset.piece) : undefined;
+  const cube = event.target.closest('.cube-svg');
+  if (touch && cube) handleCubeTap(event, cube.parentElement, id);
+  else if (id !== undefined) editCell(id);
 });
 $('#board').addEventListener('keydown', (event) => {
   const cell = event.target.closest('g[data-cell]');

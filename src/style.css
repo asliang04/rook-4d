@@ -72,6 +72,19 @@ main { max-width: 1520px; margin: auto; padding: 20px clamp(10px, 3vw, 40px) 28p
 .cube-heading { padding: 0 14px; font: 14px var(--mono); }
 .cube-stage { position: relative; background-image: radial-gradient(#9f9f9f3b .65px, transparent .65px); background-size: 17px 17px; margin: 6px 2px 0; }
 .cube-svg { display: block; width: 100%; cursor: grab; touch-action: pan-y pinch-zoom; user-select: none; overflow: visible; }
+.rotation-locked .cube-svg { touch-action: pinch-zoom; }
+.rotation-lock-status:not(:empty) {
+  position: fixed;
+  inset-inline-end: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 1;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #191919;
+  color: #fff;
+  font-size: 12px;
+  pointer-events: none;
+}
 .cube-svg:active { cursor: grabbing; }
 .volume-edge { stroke: #696969; stroke-width: 1; stroke-dasharray: 3 5; opacity: .7; pointer-events: none; vector-effect: non-scaling-stroke; }
 .cell { cursor: pointer; }
