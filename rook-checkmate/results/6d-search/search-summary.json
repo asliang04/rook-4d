@@ -1,0 +1,23 @@
+{
+  "status": "unknown",
+  "strategy": "binary",
+  "dimensions": 6,
+  "requested_range": [
+    63,
+    70
+  ],
+  "proven_lower_bound": 63,
+  "best_feasible_rooks": null,
+  "next_test_interval": [
+    63,
+    70
+  ],
+  "workers": 8,
+  "solver_sha256": "f9f1fa1a4c207550e49b1acd5e13093931715bed2d96888b13b87be94d465225",
+  "history": [
+    {
+      "rooks": 66,
+      "status": "unknown"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "status": "found",
+  "dimensions": 4,
+  "method": "exhaustive_backtracking",
+  "side_length": 3,
+  "requested_rooks": 14,
+  "elapsed_seconds": 0.00702604,
+  "king": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rooks": [
+    [
+      1,
+      0,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1
+    ],
+    [
+      1,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      1,
+      0,
+      -1
+    ],
+    [
+      1,
+      0,
+      1,
+      -1
+    ],
+    [
+      0,
+      -1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      1,
+      -1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      1,
+      0
+    ],
+    [
+      -1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      -1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ]
+  ],
+  "verified_by_ray_tracing": true,
+  "abort_reason": "",
+  "slice_coverage_profile": [
+    0,
+    6,
+    12,
+    18,
+    22,
+    25,
+    27
+  ],
+  "slice_profile_kind": "exact",
+  "optimizations": {
+    "symmetry": true,
+    "slices": true,
+    "packing": true,
+    "top_bound": true,
+    "defense_order": true,
+    "construction": true,
+    "cache": false
+  },
+  "stats": {
+    "nodes": 5834,
+    "forced_placements": 0,
+    "dead_cell_prunes": 0,
+    "capacity_prunes": 2,
+    "top_coverage_prunes": 4026,
+    "slice_prunes": 11,
+    "packing_prunes": 710,
+    "cache_hits": 0,
+    "cache_resets": 0,
+    "symmetric_choices_skipped": 6,
+    "cached_failures": 0
+  },
+  "verified_by_independent_python_simulation": true
+}

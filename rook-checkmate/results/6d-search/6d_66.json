@@ -1,0 +1,163 @@
+{
+  "status": "unknown",
+  "dimensions": 6,
+  "method": "parallel_exhaustive_backtracking",
+  "side_length": 3,
+  "requested_rooks": 66,
+  "elapsed_seconds": 3600,
+  "time_limit_seconds": 3600,
+  "node_limit": 0,
+  "king": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "rooks": [],
+  "verified_by_ray_tracing": false,
+  "abort_reason": "time_limit",
+  "slice_coverage_profile": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220,
+    230,
+    240,
+    243
+  ],
+  "slice_profile_kind": "upper_bound_from_exact_3d_profile",
+  "optimizations": {
+    "symmetry": true,
+    "slices": true,
+    "packing": true,
+    "top_bound": true,
+    "defense_order": true,
+    "construction": false,
+    "cache": false
+  },
+  "stats": {
+    "nodes": 889505544,
+    "forced_placements": 0,
+    "dead_cell_prunes": 0,
+    "capacity_prunes": 2941957,
+    "top_coverage_prunes": 563522335,
+    "slice_prunes": 216536294,
+    "packing_prunes": 43053,
+    "cache_hits": 0,
+    "cache_resets": 0,
+    "symmetric_choices_skipped": 21,
+    "cached_failures": 0
+  },
+  "parallel": {
+    "workers_requested": 8,
+    "workers_started": 8,
+    "split_depth": 4,
+    "partition_nodes": 162,
+    "tasks_generated": 144,
+    "tasks_started": 8,
+    "tasks_completed": 0,
+    "peak_active_workers": 8,
+    "wall_seconds": 3599.99,
+    "process_cpu_seconds": 24972.8,
+    "workers": [
+      {
+        "thread_id": "0x16dcb7000",
+        "nodes": 110717475,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16dd43000",
+        "nodes": 112851651,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16ddcf000",
+        "nodes": 114208513,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16de5b000",
+        "nodes": 109256891,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16dee7000",
+        "nodes": 111895195,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16df73000",
+        "nodes": 109582518,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16dfff000",
+        "nodes": 108649441,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      },
+      {
+        "thread_id": "0x16e08b000",
+        "nodes": 112343698,
+        "tasks_started": 1,
+        "tasks_completed": 0,
+        "cached_failures": 0
+      }
+    ]
+  },
+  "runner": {
+    "solver_sha256": "f9f1fa1a4c207550e49b1acd5e13093931715bed2d96888b13b87be94d465225",
+    "arguments": [
+      "--dimensions",
+      "6",
+      "--rooks",
+      "66",
+      "--workers",
+      "8",
+      "--split-depth",
+      "4",
+      "--no-construction",
+      "--time-limit",
+      "3600.0",
+      "--progress-interval",
+      "5",
+      "--node-limit",
+      "0"
+    ],
+    "strategy": "binary"
+  }
+}

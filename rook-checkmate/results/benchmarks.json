@@ -1,0 +1,709 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "records": [
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "default",
+      "median_seconds": 2.1292e-05,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 1,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 1,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "without_defense_order",
+      "median_seconds": 2.35e-05,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 1,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 1,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "without_slice_bound",
+      "median_seconds": 3.575e-05,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 20,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 6,
+        "top_coverage_prunes": 9,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 4,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "without_packing_bound",
+      "median_seconds": 1.55e-05,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 1,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 1,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "without_top_coverage_bound",
+      "median_seconds": 1.7875e-05,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 1,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 1,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "without_symmetry",
+      "median_seconds": 1.8042e-05,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 1,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 1,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "with_failure_cache",
+      "median_seconds": 0.000198542,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 1,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 1,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 1
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 5,
+      "variant": "basic_backtracking",
+      "median_seconds": 0.000143625,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 692,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 513,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "default",
+      "median_seconds": 3.4917e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 6,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 3,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "without_defense_order",
+      "median_seconds": 2.8542e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 6,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 1,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "without_slice_bound",
+      "median_seconds": 2.7542e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 6,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 3,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "without_packing_bound",
+      "median_seconds": 2.625e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 6,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 3,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "without_top_coverage_bound",
+      "median_seconds": 3.2959e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 6,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 3,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "without_symmetry",
+      "median_seconds": 3.0458e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 7,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "with_failure_cache",
+      "median_seconds": 0.00018675,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 6,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 3,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 3,
+      "rooks": 6,
+      "variant": "basic_backtracking",
+      "median_seconds": 1.7792e-05,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 7,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "default",
+      "median_seconds": 0.23131,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 160885,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 321,
+        "top_coverage_prunes": 100547,
+        "slice_prunes": 8581,
+        "packing_prunes": 17404,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 8,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "without_defense_order",
+      "median_seconds": 0.398007,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 294128,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 475,
+        "top_coverage_prunes": 186264,
+        "slice_prunes": 11276,
+        "packing_prunes": 33831,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 6,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "without_slice_bound",
+      "median_seconds": 0.205579,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 175024,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 2609,
+        "top_coverage_prunes": 111485,
+        "slice_prunes": 0,
+        "packing_prunes": 23556,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 8,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "without_packing_bound",
+      "median_seconds": 0.303449,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 266854,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 1776,
+        "top_coverage_prunes": 197372,
+        "slice_prunes": 10994,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 8,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "without_top_coverage_bound",
+      "median_seconds": 0.405329,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 234898,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 2037,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 114385,
+        "packing_prunes": 69184,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 8,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "without_symmetry",
+      "median_seconds": 4.01098,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 2779854,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 3316,
+        "top_coverage_prunes": 1745461,
+        "slice_prunes": 90859,
+        "packing_prunes": 333288,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "with_failure_cache",
+      "median_seconds": 0.295683,
+      "statuses": [
+        "infeasible"
+      ],
+      "stats": {
+        "nodes": 160885,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 321,
+        "top_coverage_prunes": 100547,
+        "slice_prunes": 8581,
+        "packing_prunes": 17404,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 8,
+        "cached_failures": 160564
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 13,
+      "variant": "basic_backtracking",
+      "median_seconds": 5.0001,
+      "statuses": [
+        "unknown"
+      ],
+      "stats": {
+        "nodes": 24073217,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 18996213,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "default",
+      "median_seconds": 0.00713992,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 5834,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 2,
+        "top_coverage_prunes": 4026,
+        "slice_prunes": 11,
+        "packing_prunes": 710,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 6,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "without_defense_order",
+      "median_seconds": 0.00594154,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 4811,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 0,
+        "top_coverage_prunes": 3144,
+        "slice_prunes": 18,
+        "packing_prunes": 712,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 3,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "without_slice_bound",
+      "median_seconds": 0.00566125,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 5855,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 5,
+        "top_coverage_prunes": 4044,
+        "slice_prunes": 0,
+        "packing_prunes": 717,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 6,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "without_packing_bound",
+      "median_seconds": 0.0103685,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 10828,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 4,
+        "top_coverage_prunes": 8783,
+        "slice_prunes": 17,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 6,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "without_top_coverage_bound",
+      "median_seconds": 0.0145388,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 9681,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 56,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 3154,
+        "packing_prunes": 4647,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 6,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "without_symmetry",
+      "median_seconds": 0.12387,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 95156,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 33,
+        "top_coverage_prunes": 60099,
+        "slice_prunes": 651,
+        "packing_prunes": 15646,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "with_failure_cache",
+      "median_seconds": 0.00844463,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 5834,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 2,
+        "top_coverage_prunes": 4026,
+        "slice_prunes": 11,
+        "packing_prunes": 710,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 6,
+        "cached_failures": 5818
+      }
+    },
+    {
+      "dimensions": 4,
+      "rooks": 14,
+      "variant": "basic_backtracking",
+      "median_seconds": 1.1326,
+      "statuses": [
+        "found"
+      ],
+      "stats": {
+        "nodes": 5984451,
+        "forced_placements": 0,
+        "dead_cell_prunes": 0,
+        "capacity_prunes": 4780496,
+        "top_coverage_prunes": 0,
+        "slice_prunes": 0,
+        "packing_prunes": 0,
+        "cache_hits": 0,
+        "cache_resets": 0,
+        "symmetric_choices_skipped": 0,
+        "cached_failures": 0
+      }
+    }
+  ]
+}

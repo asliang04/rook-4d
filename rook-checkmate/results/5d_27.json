@@ -1,0 +1,247 @@
+{
+  "status": "found",
+  "dimensions": 5,
+  "method": "verified_5d_hamming_code_construction",
+  "side_length": 3,
+  "requested_rooks": 27,
+  "elapsed_seconds": 0.000164,
+  "king": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "rooks": [
+    [
+      0,
+      0,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1,
+      -1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      0,
+      -1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      -1
+    ],
+    [
+      0,
+      -1,
+      1,
+      0,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      -1
+    ],
+    [
+      -1,
+      0,
+      1,
+      1,
+      -1
+    ],
+    [
+      0,
+      0,
+      -1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      1,
+      -1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      -1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      -1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      1,
+      -1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      -1,
+      0,
+      1,
+      1,
+      1
+    ]
+  ],
+  "verified_by_ray_tracing": true,
+  "abort_reason": "",
+  "slice_coverage_profile": [
+    0,
+    8,
+    16,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    77,
+    80,
+    81
+  ],
+  "slice_profile_kind": "upper_bound_from_exact_3d_profile",
+  "optimizations": {
+    "symmetry": true,
+    "slices": true,
+    "packing": true,
+    "top_bound": true,
+    "defense_order": true,
+    "construction": true,
+    "cache": false
+  },
+  "stats": {
+    "nodes": 0,
+    "forced_placements": 0,
+    "dead_cell_prunes": 0,
+    "capacity_prunes": 0,
+    "top_coverage_prunes": 0,
+    "slice_prunes": 0,
+    "packing_prunes": 0,
+    "cache_hits": 0,
+    "cache_resets": 0,
+    "symmetric_choices_skipped": 0,
+    "cached_failures": 0
+  },
+  "verified_by_independent_python_simulation": true
+}

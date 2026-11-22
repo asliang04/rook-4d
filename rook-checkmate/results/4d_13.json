@@ -1,0 +1,49 @@
+{
+  "status": "infeasible",
+  "dimensions": 4,
+  "method": "exhaustive_backtracking",
+  "side_length": 3,
+  "requested_rooks": 13,
+  "elapsed_seconds": 0.232375,
+  "king": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "rooks": [],
+  "verified_by_ray_tracing": false,
+  "abort_reason": "",
+  "slice_coverage_profile": [
+    0,
+    6,
+    12,
+    18,
+    22,
+    25,
+    27
+  ],
+  "slice_profile_kind": "exact",
+  "optimizations": {
+    "symmetry": true,
+    "slices": true,
+    "packing": true,
+    "top_bound": true,
+    "defense_order": true,
+    "construction": true,
+    "cache": false
+  },
+  "stats": {
+    "nodes": 160885,
+    "forced_placements": 0,
+    "dead_cell_prunes": 0,
+    "capacity_prunes": 321,
+    "top_coverage_prunes": 100547,
+    "slice_prunes": 8581,
+    "packing_prunes": 17404,
+    "cache_hits": 0,
+    "cache_resets": 0,
+    "symmetric_choices_skipped": 8,
+    "cached_failures": 0
+  }
+}

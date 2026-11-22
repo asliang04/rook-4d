@@ -1,0 +1,67 @@
+{
+  "unrestricted_1d_coverage_profile": [
+    0,
+    2,
+    3
+  ],
+  "unrestricted_2d_coverage_profile": [
+    0,
+    4,
+    7,
+    9
+  ],
+  "unrestricted_3d_coverage_profile": [
+    0,
+    6,
+    12,
+    18,
+    22,
+    25,
+    27
+  ],
+  "six_rook_placements_checked": 230230,
+  "six_rook_checkmates": 147,
+  "six_rook_checkmates_up_to_rotations_and_reflections": 7,
+  "all_checkmates_verified_by_ray_tracing": true,
+  "defense_component_patterns": {
+    "[2, 2, 2]": 84,
+    "[2, 4]": 63
+  },
+  "sorted_slice_occupancy_patterns": {
+    "[(1, 1, 4), (2, 2, 2), (2, 2, 2)]": 63,
+    "[(2, 2, 2), (2, 2, 2), (2, 2, 2)]": 84
+  },
+  "example": [
+    [
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      0
+    ],
+    [
+      -1,
+      0,
+      -1
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "elapsed_seconds": 0.09152704104781151
+}

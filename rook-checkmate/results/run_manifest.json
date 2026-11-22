@@ -1,0 +1,120 @@
+{
+  "source_sha256": "8b86406b610c445d28b3a41b6c86466502127488962ebf25a55076e3f500ffeb",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "runs": [
+    {
+      "file": "4d_12.json",
+      "arguments": [
+        "--dimensions",
+        "4",
+        "--rooks",
+        "12",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 1
+    },
+    {
+      "file": "4d_13.json",
+      "arguments": [
+        "--dimensions",
+        "4",
+        "--rooks",
+        "13",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 1
+    },
+    {
+      "file": "4d_14.json",
+      "arguments": [
+        "--dimensions",
+        "4",
+        "--rooks",
+        "14",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 0
+    },
+    {
+      "file": "4d_13_crosscheck.json",
+      "arguments": [
+        "--dimensions",
+        "4",
+        "--rooks",
+        "13",
+        "--time-limit",
+        "60",
+        "--no-symmetry",
+        "--no-slices",
+        "--no-packing",
+        "--no-cache"
+      ],
+      "exit_code": 1
+    },
+    {
+      "file": "5d_25.json",
+      "arguments": [
+        "--dimensions",
+        "5",
+        "--rooks",
+        "25",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 1
+    },
+    {
+      "file": "5d_26.json",
+      "arguments": [
+        "--dimensions",
+        "5",
+        "--rooks",
+        "26",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 1
+    },
+    {
+      "file": "5d_27.json",
+      "arguments": [
+        "--dimensions",
+        "5",
+        "--rooks",
+        "27",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 0
+    },
+    {
+      "file": "5d_35.json",
+      "arguments": [
+        "--dimensions",
+        "5",
+        "--rooks",
+        "35",
+        "--time-limit",
+        "60"
+      ],
+      "exit_code": 0
+    },
+    {
+      "file": "5d_26_crosscheck.json",
+      "arguments": [
+        "--dimensions",
+        "5",
+        "--rooks",
+        "26",
+        "--time-limit",
+        "60",
+        "--no-top-bound",
+        "--no-packing"
+      ],
+      "exit_code": 1
+    }
+  ]
+}
